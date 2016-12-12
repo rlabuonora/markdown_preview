@@ -1,25 +1,13 @@
-div.panes {
-    margin: 50px 25px;
+
+.row {
+
+    margin-top: 60px;
+
 }
 
-div.input {
-    width: 500px;
-    margin-left: 150px;
-    float: left;
-}
-div.output {
-    width: 500px;
-    margin-left: 630px;
-    margin-right: 150px;
-}
-.title {
-    text-align: center;
-}
 
-.clear {
-    clear: both;
-}
 
-.panes {
-   margin: 20px 100px;
+.output-content {
+    min-height: 510px;
+    
 }

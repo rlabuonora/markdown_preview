@@ -3,7 +3,7 @@ import './App.css';
 import renderHTML from 'react-render-html';
 
 var marked = require('marked');
-var txt = marked('I am using __markdown__.');
+
 
 class Input extends Component {
 
@@ -13,9 +13,10 @@ class Input extends Component {
     }
     render() {
         return(
-               <div className="input">
-                <textarea  rows="30" cols="55"
-            onInput={this.handleInput.bind(this)}
+               <div className="input col-sm-5 col-xs-offset-1">
+                <textarea  rows="25" cols="55"
+                   onInput={this.handleInput.bind(this)}
+                   value={this.props.value}
                 >
                   </textarea>
                 </div>
@@ -26,8 +27,8 @@ class Input extends Component {
 class Output extends Component {
     render() {
         return(
-              <div className="output">
-                <pre>
+              <div className="output col-sm-5">
+                <pre className="output-content">
                 {renderHTML(this.props.value)}
                 </pre>
               </div>
@@ -39,22 +40,22 @@ class App extends Component {
   constructor() {
       super();
       this.state = {
-          txt: ''
+          txt: 'Enter __markdown__ and preview it'
       }
   }
     handleInput(txt) {
         this.setState({
-            txt: marked(txt)
+            txt: txt
         });
   }
   render() {
     return (
-      <div className="App">
-            <h1 className="title">Markdown Preview</h1>
-            <div className="panes">
-            <Input onInput={this.handleInput.bind(this)} />
-            <Output value={this.state.txt} />
-            <div className="clear"></div>
+      <div className="container">
+            <h1 className="text-center row">Markdown Preview</h1>
+            <div className="row">
+            <Input onInput={this.handleInput.bind(this)}
+                   value={this.state.txt}/>
+            <Output value={marked(this.state.txt)} />
             </div>
       </div>
     );
