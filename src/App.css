@@ -1,14 +1,15 @@
 div.panes {
-    margin: 50px 150px;
+    margin: 50px 25px;
 }
 
 div.input {
-    width: 200px;
+    width: 500px;
     margin-left: 150px;
     float: left;
 }
 div.output {
-    margin-left: 730px;
+    width: 500px;
+    margin-left: 630px;
     margin-right: 150px;
 }
 .title {

@@ -8,6 +8,7 @@
   "dependencies": {
     "marked": "^0.3.6",
     "react": "^15.4.1",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
     "react-render-html": "^0.1.6"
   },
