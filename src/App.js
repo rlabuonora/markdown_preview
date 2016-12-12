@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import renderHTML from 'react-render-html';
 
 var marked = require('marked');
 var txt = marked('I am using __markdown__.');
@@ -21,7 +21,7 @@ class Output extends Component {
         return(
               <div className="output">
                 <pre>
-                {`this.props.value`}
+                {renderHTML(this.props.value)}
                 </pre>
 
               </div>
