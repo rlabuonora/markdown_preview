@@ -8,12 +8,11 @@ var marked = require('marked');
 class Input extends Component {
 
     handleInput(event) {
-        console.log(event.target.value);
         this.props.onInput(event.target.value);
     }
     render() {
         return(
-               <div className="input col-sm-5 col-xs-offset-1">
+               <div className="input col-sm-4 col-sm-offset-1">
                 <textarea  rows="25" cols="55"
                    onInput={this.handleInput.bind(this)}
                    value={this.props.value}
@@ -27,7 +26,7 @@ class Input extends Component {
 class Output extends Component {
     render() {
         return(
-              <div className="output col-sm-5">
+              <div className="output col-sm-4 col-sm-offset-1">
                 <pre className="output-content">
                 {renderHTML(this.props.value)}
                 </pre>

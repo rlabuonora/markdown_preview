@@ -1,12 +1,10 @@
-
 .row {
-
     margin-top: 60px;
-
 }
 
-
-
+.output {
+    width: 500px;
+}
 .output-content {
     min-height: 510px;
     
